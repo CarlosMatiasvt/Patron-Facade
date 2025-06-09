@@ -25,6 +25,10 @@ void ABomberMan_012025GameMode::BeginPlay()
 
 
 	// Inicializar el nivel usando el patrón Facade
+	//el patron facade es una clase que se encarga de inicializar todo el nivel, laberinto, enemigos, etc.
+	// es una fachada que oculta la complejidad de la inicialización del nivel y permite que el código sea más limpio y fácil de mantener.
+	//nos permite encapsular la lógica de inicialización del nivel en una sola clase, lo que facilita su uso y mantenimiento.
+	// a la vez que nos permite organizar el código de manera más clara y concisa.
 	UWorld* World = GetWorld();
 	APatronFacade* Fachada = World->SpawnActor<APatronFacade>();
 	Fachada->InicializarNivel(World);
